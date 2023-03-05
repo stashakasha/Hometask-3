@@ -1,9 +1,20 @@
 import './assets/scss/style.scss';
 
+import { Header, Hero, Services, About, Stats, Testimonials, News, Subscribe, Footer } from './components'
+
+
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className='wrapper'>
+      <Header />
+      <Hero />
+      <Services />
+      <About />
+      <Stats />
+      <Testimonials />
+      <News />
+      <Subscribe />
+      <Footer />
     </div>
   );
 }
