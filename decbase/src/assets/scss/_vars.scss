@@ -1,18 +1,25 @@
 $mock-up-width: 1440;
-$pop-up-width: 1240;
+$pop-up-width: 1240px;
 $mobile-width: 767.98;
 $vw: $mock-up-width/100vw;
 $mb: $mobile-width/100vw;
 
+// BrPoint
+$mobile: 767.98px;
+
+//Background
 $background: #FFFFFF;
 $background-gray: #F8F8F8;
 
+//Primary
 $primary-brown: #CAA892;
 $primary-green: #37806B;
 
+//Fonts
 $font-main: 'Open Sans', sans-serif;
 $font-acent: 'Poppins', sans-serif;
 
+//Text colors
 $text-black: #212121;
 $text-light: #646464;
 $text-white: #FFFFFF;
