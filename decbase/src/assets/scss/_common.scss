@@ -24,3 +24,12 @@ body {
 .main__container {
     padding: 0 100/$vw; // 100/1440  
 }
+
+.container {
+    max-width: $pop-up-width;
+	margin: 0 auto;
+}
+
+.btn {
+	border-radius: 15px 0px;
+}
