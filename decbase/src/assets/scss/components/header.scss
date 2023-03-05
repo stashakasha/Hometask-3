@@ -1,0 +1,132 @@
+@import '../mixins';
+@import '../vars';
+
+.header {
+    margin-top: 100/$vw;
+    width: 1240/$vw;
+    @include flex_between;
+    align-content: center;
+    align-items: center;
+    &__logo {
+        transition: scale 0.3s ease;
+        &-img {
+            width: 150/$vw;
+            min-width: 120px;
+        }
+        &:active {
+            scale: 1.05;
+        }
+    }
+    &__nav{
+        font-weight: 600;
+        font-size: 16/$vw;
+        line-height: 1.375;
+        color: $text-light;
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 15/$vw;
+        }
+        &-item {
+            text-transform: uppercase;
+        }
+        &-link {
+            padding: 5/$vw 10/$vw;
+            border: 1px solid $background;
+            border-radius: 15/$vw 0;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $primary-green;
+                border: 1px solid $primary-green;
+                border-radius: 25/$vw;
+            }
+            &:active {
+                border: 1px solid $background;
+            }
+        }
+        &-btn {
+            background-color: $primary-brown;
+            color: $text-white;
+            width: 97/$vw;
+            height: 32/$vw;
+            text-align: center;
+            @include flex_center;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: $primary-green;
+            }
+            &:active {
+                scale: 1.1;
+            }
+        }
+    }
+    &__mobile-btn {
+        display: none;
+    }
+}
+
+// Adaptive
+
+@media (max-width: $mobile) {
+    .header {
+        &__logo {
+            &-img {
+                width: 150/$mb;
+                min-width: 120px;
+            }
+        }
+        &__nav{
+            font-size: 30/$mb;
+            &-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20/$mb;
+                justify-content: center;
+                position: fixed;
+                left: -100%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: $background;
+                z-index: 10;
+                transition: left 1s ease 0s;
+                &.active {
+                    left: 0;
+                }
+            }
+            &-link {
+                padding: 5/$mb 10/$mb;
+                border: 1px solid $background;
+                border-radius: 15/$mb 0;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                    color: $primary-green;
+                    border: 1px solid $primary-green;
+                    border-radius: 25/$mb;
+                }
+                &:active {
+                    border: 1px solid $background;
+                }
+            }
+            &-btn {
+                margin-top: 20/$mb;
+                background-color: $primary-brown;
+                color: $text-white;
+                width: 180/$mb;
+                height: 60/$mb;
+            }
+        }
+        &__mobile-btn {
+            display: block;
+            cursor: pointer;
+            z-index: 10;
+            color: $primary-green;
+            &:active {
+                color: $primary-brown;
+            }
+        }
+
+    }
+}
