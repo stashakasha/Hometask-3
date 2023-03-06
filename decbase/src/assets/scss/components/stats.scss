@@ -1,0 +1,130 @@
+@import '../mixins';
+@import '../vars';
+
+.stats {
+    background-color: var(--background-gray);
+    margin-top: 200/$vw;
+    padding: 90/$vw 0 90/$vw;
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 48/$vw;
+        line-height: 1.25;
+        text-align: center;
+        width: 821/$vw;
+        margin: 0 auto;
+    }
+    &__cards {
+        margin: 90/$vw;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 95/$vw);
+    }
+    &__card {
+        border-radius: 40/$vw 0;
+        background-color: var(--background);
+        box-shadow: 0 13px 16px rgba(0, 0, 0, 0.1);
+        width: 185/$vw;
+        height: 185/$vw;
+        @include flex_center;
+        flex-direction: column;
+        position: relative;
+        transition: all .3s ease-in-out;
+        &:hover {
+            scale: 1.008;
+            box-shadow: 0 13px 16px rgba(0, 0, 0, 0.15);
+        }
+        &-num {
+            font-weight: 700;
+            font-size: 50/$vw;
+            line-height: 1.2;
+            text-align: center;
+        }
+        &-desc {
+            font-weight: 600;
+            font-size: 18/$vw;
+            line-height: 1.67;
+            color: var(--text-light);
+            text-align: center;
+        }
+        &-first {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            &::after {
+                content: "";
+                width: 95/$vw;
+                height: 95/$vw;
+                border-top: 1px solid #E0E0E0;
+                border-right: 1px solid #E0E0E0;
+                position: absolute;
+                left: 185/$vw;
+                top: 90/$vw;
+            }
+        }
+        &-second {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            &::before {
+                content: "";
+                width: 79/$vw;
+                height: 95/$vw;
+                border-top: 1px solid #E0E0E0;
+                position: absolute;
+                left: -79/$vw;
+                top: 90/$vw;
+            }
+            &::after {
+                content: "";
+                width: 95/$vw;
+                height: 90/$vw;
+                border-bottom: 1px solid #E0E0E0;
+                border-right: 1px solid #E0E0E0;
+                position: absolute;
+                left: 185/$vw;
+                top: -5/$vw;
+            }
+        }
+        &-third {
+            grid-column: 5/6;
+            grid-row: 1/2;
+            &::before {
+                content: "";
+                width: 79/$vw;
+                height: 95/$vw;
+                border-top: 1px solid #E0E0E0;
+                position: absolute;
+                left: -79/$vw;
+                top: 90/$vw;
+            }
+            &::after {
+                content: "";
+                width: 95/$vw;
+                height: 95/$vw;
+                border-top: 1px solid #E0E0E0;
+                border-right: 1px solid #E0E0E0;
+                position: absolute;
+                left: 185/$vw;
+                top: 90/$vw;
+            }
+        }
+        &-fourth {
+            grid-column: 7/8;
+            grid-row: 2/3;
+            &::before {
+                content: "";
+                width: 79/$vw;
+                height: 95/$vw;
+                border-top: 1px solid #E0E0E0;
+                position: absolute;
+                left: -79/$vw;
+                top: 90/$vw;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .stats {
+        display: none;
+    }
+}
