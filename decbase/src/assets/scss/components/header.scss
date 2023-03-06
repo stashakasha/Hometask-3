@@ -63,7 +63,7 @@
         display: none;
     }
     &__theme-btn {
-
+        cursor: pointer;
         color: var(--text-light);
         transition: scale .3s ease;
         &:hover {
