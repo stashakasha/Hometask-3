@@ -2,6 +2,9 @@ import React from "react";
 import { RiFacebookFill, RiInstagramLine, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import Logo from "../assets/img/logo.png"
 
+let today = new Date(); 
+let year = today.getFullYear(); 
+
 const Footer = () => {
     return(
         <div className="container">
@@ -52,7 +55,7 @@ const Footer = () => {
                 </div>
             </footer>
             <hr className="footer__line"/>
-            <p className="footer__copy">Copyright @ 2020 <span>Brandoxide</span>.all right reserved.</p>
+            <p className="footer__copy">Copyright @ {year} <span>Brandoxide</span>.all right reserved.</p>
         </div>
     );
 }
