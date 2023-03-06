@@ -4,7 +4,7 @@
 .about{
     &__learn {
         @include flex_center;
-        gap: 50/$vw;
+        gap: 100/$vw;
         &-wrap {
             position: relative;
             @include img-decor;
@@ -45,6 +45,8 @@
     }
     &__read {
         @include flex_center;
+        margin-top: 200/$vw;
+        gap: 100/$vw;
         &-content {
             max-width: 535/$vw;
             display: flex;
