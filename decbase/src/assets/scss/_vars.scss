@@ -7,19 +7,32 @@ $mb: $mobile-width/100vw;
 // BrPoint
 $mobile: 767.98px;
 
-//Background
-$background: #FFFFFF;
-$background-gray: #F8F8F8;
-
-//Primary
-$primary-brown: #CAA892;
-$primary-green: #37806B;
-
 //Fonts
 $font-main: 'Open Sans', sans-serif;
 $font-acent: 'Poppins', sans-serif;
 
+html[data-theme="light"] {
+//Background
+--background: #FFFFFF;
+--background-gray: #F8F8F8;
+//Primary
+--primary-brown: #CAA892;
+--primary-green: #37806B;
 //Text colors
-$text-black: #212121;
-$text-light: #646464;
-$text-white: #FFFFFF;
+--text-black: #212121;
+--text-light: #646464;
+--text-white: #FFFFFF;    
+}
+
+html[data-theme="dark"] {
+//Background
+--background: #212121;
+--background-gray: #646464;
+//Primary
+--primary-brown: #37806B;
+--primary-green: #CAA892;
+//Text colors
+--text-black: #FFFFFF;
+--text-light: #646464;
+--text-white: #212121; 
+}

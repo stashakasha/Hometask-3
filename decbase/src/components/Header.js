@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import { useTheme } from '../hooks/use-theme'
+
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { FaSun, FaMoon  } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 
 
 const Header = () => {
     const [nav, setNav] = useState(false);
+    const { theme, setTheme } = useTheme()
+    const handleLightThemeClick = () => {
+        setTheme('light')
+        localStorage.setItem('app-theme', theme)
+    }
+    const handleDarkThemeClick = () => {
+        setTheme('dark')
+        localStorage.setItem('app-theme', theme)
+    }
     return(
         <div className="container">
             <header className="header">
@@ -41,8 +53,15 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <div onClick={() => setNav(!nav)} className="header__mobile-btn">
-                    {nav ? <AiOutlineClose /> : <AiOutlineMenu />}
+                <div className="header__btn">
+                    <div className="header__theme-btn">
+                        { theme==="light" ? <FaMoon className="header__theam-btn" onClick={handleDarkThemeClick}/>
+                        : <FaSun className="header__theam-btn" onClick={handleLightThemeClick} />}
+                    </div>
+                    <div onClick={() => setNav(!nav)} className="header__mobile-btn">
+                        {nav ? <AiOutlineClose /> : <AiOutlineMenu />}
+                    </div>
+                    
                 </div>
             </header>
             
