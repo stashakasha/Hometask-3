@@ -1,0 +1,123 @@
+@import '../mixins';
+@import '../vars';
+
+.footer {
+    padding-top: 70/$vw;
+    padding-bottom: 70/$vw;
+    background-color: var(--background-gray);
+    color: var(--text-light);
+    @include flex_around;
+    &__logo {
+        &-icon {
+            width: 150/$vw;
+            min-width: 120px;
+        }
+        &-desc {
+            margin-top: 15/$vw;
+            font-weight: 400;
+            font-size: 18/$vw;
+            line-height: 1.55;
+            width: 350/$vw;
+        }
+    }
+    &__nav {
+        @include flex_around;
+        gap: 60/$vw;
+    }
+    &__links,  &__company, &__contact, &__socials {
+        font-weight: 400;
+        font-size: 18/$vw;
+        line-height: 2.22;
+    }
+    &__links>p,  &__company>p, &__contact>p, &__socials>p{
+        color: var(--text-black);
+        font-weight: 600;
+        font-size: 24/$vw;
+        line-height: 1.66;
+    }
+    &__links>ul>li,  &__company>ul>li, &__contact>ul>li {
+        transition: scale 0.2s ease;
+        &:hover {
+            color: var(--primary-green);
+        }
+        &:active {
+            scale: 1.03;
+        }
+    }
+    &__socials {
+        text-align: center;
+        &-list {
+            @include flex_center;
+            gap: 10/$vw;
+            margin-top: 20/$vw;
+        }
+        &-item {
+            @include flex_center;
+            width: 37/$vw;
+            height: 37/$vw;
+            background-color: #D5D5D5;
+            color: var(--background);
+            border-radius: 50%;
+            &:hover {
+                background-color: var(--primary-green);
+            }
+        }
+    }
+    &__line {
+        border: 1/$vw solid var(--text-light);
+    }
+    &__copy {
+        padding: 15/$vw;
+        text-align: center;
+        color: var(--text-light);
+        font-weight: 400;
+        font-size: 18/$vw;
+        line-height: 1.388;
+        background-color: var(--background-gray);
+        span {
+            color: var(--primary-green);
+        }
+    }
+}
+
+// Adaptive
+@media (max-width: $mobile) {
+    .footer {
+        padding-top: 40/$mb;
+        padding-bottom: 40/$mb;
+        flex-wrap: wrap;
+        &__logo {
+            &-icon {
+                width: 150/$mb;
+            }
+            &-desc {
+                display: none;
+            }
+        }
+        &__nav {
+            display: flex;
+            gap: 50/$mb;
+            margin: 30/$mb auto;
+        }
+        &__links,  &__company, &__contact, &__socials {
+            font-size: 18/$mb;
+        }
+        &__links>p,  &__company>p, &__contact>p, &__socials>p{
+            font-size: 24/$mb;
+        }
+        &__socials {
+            &-list {
+                gap: 20/$mb;
+                margin-top: 20/$mb;
+            }
+            &-item {
+                width: 37/$mb;
+                height: 37/$mb;
+            }
+        }
+        &__copy {
+            padding: 15/$vw;
+            font-size: 18/$mb;
+        }
+    }
+}
