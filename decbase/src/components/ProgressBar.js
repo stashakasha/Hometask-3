@@ -11,9 +11,9 @@ function showProgress() {
 
 const ProgressBar = () => {
     return(
-        <div class="progress">
-            <div class="progress__container">
-                <div class="progress__bar" id="myBar"></div>
+        <div className="progress">
+            <div className="progress__container">
+                <div className="progress__bar" id="myBar"></div>
             </div>
         </div>
     );
