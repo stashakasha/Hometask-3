@@ -1,0 +1,51 @@
+@import '../mixins';
+@import '../vars';
+
+.hero {
+    &__wrap {
+       @include flex_center;
+       margin: 90/$vw 50/$vw 0;
+       gap: 15/$vw;
+    }
+    &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 635/$vw;
+        &-title {
+            @include title;
+            margin-top: 14/$vw;
+        }
+        &-desc {
+            margin-top: 26/$vw;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 72/$vw;
+            line-height: 1.08;
+            color: var(--text-black);
+        }
+        &-text {
+            margin-top: 26/$vw;
+            font-weight: 400;
+            font-size: 18/$vw;
+            line-height: 1.66;
+        }
+        &-btn {
+            @include btn-main;
+            margin-top: 50/$vw;
+        }
+        
+    }
+    &__wrapper {
+        position: relative;
+        @include img-decor;
+        &::before {
+            top: 33/$vw;
+            left: 33/$vw;
+            width: 700/$vw;
+        }
+    }
+    &__img {
+        width: 700/$vw;
+        @include img-border;
+    }
+}
