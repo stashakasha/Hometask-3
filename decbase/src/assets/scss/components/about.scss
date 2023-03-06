@@ -59,8 +59,8 @@
         &-title {
             position: relative;
             height: 200/$vw;
-                background-color: var(--background);
-                mix-blend-mode: var(--mix-blend-mode);
+            background-color: var(--background);
+            mix-blend-mode: var(--mix-blend-mode);
                 span {
                     font-weight: 700;
                     font-size: 190/$vw;
@@ -114,6 +114,9 @@
             }
             &-content {
                 max-width: 535/$mb;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             &-desc {
                 margin-top: 30/$mb;
@@ -126,7 +129,7 @@
             }
             &-btn {
                 @include btn-main;
-                margin-top: 20/$mb;
+                margin-top: 50/$mb;
             }
         }
         &__read {
@@ -134,6 +137,7 @@
             flex-direction: column;
             &-content {
                 max-width: 535/$mb;
+                align-items: center;
             }
             &-wrapper {
                 position: relative;
@@ -148,13 +152,12 @@
                 }
             &-desc {
                 margin-top: 25/$mb;
+
                 font-size: 50/$mb;
-            }
-            &-btn {
-                margin-top: 20/$mb;
+                text-align: center;
             }
             &-wrap {
-                margin-top: 20/$mb;
+                margin-top: 60/$mb;
                 position: relative;
                 @include img-decor;
                 &::before {

@@ -44,10 +44,10 @@
 		scale: 1.1;
 	}
 	@media (max-width: $mobile) {
-		width: 150/$mb;
-		height: 48/$mb;
+		width: 180/$mb;
+		height: 60/$mb;
 		border-radius: 20/$mb 0;
-		font-size: 18/$mb;
+		font-size: 20/$mb;
 	}
 }
 @mixin img-border {
