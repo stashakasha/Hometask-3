@@ -49,3 +49,40 @@
         @include img-border;
     }
 }
+
+@media (max-width: $mobile) {
+    .hero {
+        &__wrap {
+            flex-wrap: wrap-reverse;
+            align-content: center;
+            align-items: center;
+            margin: 50/$mb auto 0;
+            gap: 50/$mb;
+        }
+        &__content {
+        max-width: 635/$mb;
+        align-items: center;
+            &-title {
+                margin-top: 14/$mb;
+            }
+            &-desc {
+                margin-top: 26/$mb;
+                font-size: 72/$mb;
+            }
+            &-text {
+                margin-top: 26/$mb;
+                font-size: 18/$mb;
+            }
+        }
+        &__wrapper {
+            &::before {
+                top: 33/$mb;
+                left: 33/$mb;
+                width: 500/$mb;
+            }
+        }
+        &__img {
+            width: 500/$mb;
+        }
+    }
+}
