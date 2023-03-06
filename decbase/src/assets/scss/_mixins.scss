@@ -16,7 +16,7 @@
 	justify-content: space-around;
 }
 
-@mixin title {
+@mixin section-title {
 	font-weight: 600;
 	font-size: 20/$vw;
 	line-height: 1.35;

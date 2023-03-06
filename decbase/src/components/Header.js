@@ -11,11 +11,11 @@ const Header = () => {
     const { theme, setTheme } = useTheme()
     const handleLightThemeClick = () => {
         setTheme('light')
-        localStorage.setItem('app-theme', theme)
+        sessionStorage.setItem('app-theme', theme)
     }
     const handleDarkThemeClick = () => {
         setTheme('dark')
-        localStorage.setItem('app-theme', theme)
+        sessionStorage.setItem('app-theme', theme)
     }
     return(
         <div className="container">
