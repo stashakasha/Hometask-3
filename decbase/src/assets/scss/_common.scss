@@ -2,7 +2,7 @@
 
 html {
     font-family: $font-main;
-    color: $text-black;
+    color: var(--text-black);
     background-color: #E5E5E5;
 }
 
@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-    background-color: $background;
+    background-color: var(--background);
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -23,13 +23,16 @@ body {
 }
 .main__container {
     padding: 0 100/$vw; // 100/1440  
+	transition: background-color .3s ease-in-out;
 }
 
 .container {
     max-width: $pop-up-width;
 	margin: 0 auto;
+	transition: color .3s ease;
 }
 
 .btn {
 	border-radius: 15px 0px;
+	transition: all 0.3s ease;
 }
