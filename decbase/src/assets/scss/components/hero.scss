@@ -12,7 +12,7 @@
     flex-direction: column;
     max-width: 635/$vw;
         &-title {
-            @include title;
+            @include section-title;
             margin-top: 14/$vw;
         }
         &-desc {
