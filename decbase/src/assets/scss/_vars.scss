@@ -21,7 +21,9 @@ html[data-theme="light"] {
 //Text colors
 --text-black: #212121;
 --text-light: #646464;
---text-white: #FFFFFF;    
+--text-white: #FFFFFF;
+//Other
+--mix-blend-mode: lighten;    
 }
 
 html[data-theme="dark"] {
@@ -35,4 +37,6 @@ html[data-theme="dark"] {
 --text-black: #FFFFFF;
 --text-light: #646464;
 --text-white: #212121; 
+//Other
+--mix-blend-mode: darken;  
 }
