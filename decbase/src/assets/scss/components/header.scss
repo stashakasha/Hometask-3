@@ -2,7 +2,7 @@
 @import '../vars';
 
 .header {
-    margin-top: 100/$vw;
+    margin: 100/$vw auto 0;
     width: 1240/$vw;
     @include flex_between;
     align-content: center;
