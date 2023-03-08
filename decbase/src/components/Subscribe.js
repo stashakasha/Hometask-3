@@ -23,10 +23,13 @@ const Subscribe = () => {
     reset();
   };
 
+  var today = new Date();
+  var now = today.toLocaleDateString('en-US');
+
   return (
     <section id='subscribe' className="container">
         <div id="popup" className="popup">
-            <p className='popup-text'>Тільки сьогодні!!!<br/> Всім <span>Олександрам</span> знижка <span>120%</span></p>
+            <p className='popup-text'>Тільки сьогодні!!!<br/>{now}<br/> Всім <span>Олександрам</span> знижка <span>120%</span></p>
             <div className="hypnotic"></div>
         </div>
       <div className="subscribe">
