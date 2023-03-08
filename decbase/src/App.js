@@ -1,11 +1,12 @@
 import './assets/scss/style.scss';
 
-import { Header, ProgressBar, Hero, Services, About, Stats, Testimonials, News, Subscribe, Footer } from './components'
+import { Preloader, Header, ProgressBar, Hero, Services, About, Stats, Testimonials, News, Subscribe, Footer } from './components'
 
 
 function App() {
   return (
     <div className='wrapper'>
+      <Preloader />
       <Header />
       <ProgressBar />
       <Hero />

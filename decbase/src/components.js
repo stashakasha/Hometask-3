@@ -1,3 +1,4 @@
+export { default as Preloader } from './components/Preloader';
 export { default as Header } from './components/Header';
 export { default as ProgressBar } from './components/ProgressBar';
 export { default as Hero } from './components/Hero';
