@@ -1,0 +1,94 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    @include flex-center;
+    background: var(--background);
+    z-index: 1001;
+  }
+
+  .spinner {
+    margin: 0;
+    width: 200/$vw;
+    height: 200/$vw;
+    font-size: 10/$vw;
+    @include flex-center;
+  }
+  
+  .spinner > div {
+    margin-left: 30/$vw;
+    background-color: var(--primary-green);
+    height: 200%;
+    width: 8/$vw;
+    border-radius: 90%;
+    display: inline-block;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+  
+//   .preloader__image {
+//     position: relative;
+//     top: 50%;
+//     left: 50%;
+//     width: 70px;
+//     height: 70px;
+//     margin-top: -35px;
+//     margin-left: -35px;
+//     text-align: center;
+//     animation: preloader-rotate 5s infinite linear;
+//     path {
+//         fill: var(--primary-green)
+//     }
+//   }
+  
+//   @keyframes preloader-rotate {
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+  
+  .loaded_hiding .preloader {
+    transition: all 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
