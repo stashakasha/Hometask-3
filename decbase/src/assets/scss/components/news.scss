@@ -1,0 +1,110 @@
+@import '../mixins';
+@import '../vars';
+
+
+.news {
+    background-color: var(--background-gray);
+    padding-top: 90/$vw;
+    padding-bottom: 90/$vw;
+    &__title {
+        @include section-title;
+        text-align: center;
+     }
+    &__desc {
+        margin: 0 auto;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 48/$vw;
+        line-height: 1.7;
+        text-align: center;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100/$vw;
+
+    }
+    &__card {
+        &-cont {
+            @include img-decor;
+            position: relative;
+            &::before {
+                top: 33/$vw;
+                left: 33/$vw;
+                width: 550/$vw;
+            }
+        }
+        
+        &-img {
+            @include img-border;
+            width: 550/$vw;
+            @include img-decor;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 30/$vw;
+            line-height: .93;
+            margin-top: 60/$vw;
+        }
+        &-text {
+            margin-top: 20/$vw;
+            line-height: 1.6;
+            color: var(--text-light);
+            width: 600/$vw;
+        }
+        &-btn {
+            @include btn-main;
+            width: 280/$vw;
+            margin-top: 50/$vw;
+        }
+    }
+}
+
+
+//Adaptive 
+@media (max-width: $mobile) {
+    .news {
+        padding-top: 90/$mb;
+        padding-bottom: 90/$mb;
+        &__title {
+            @include section-title;
+         }
+        &__desc {
+            font-weight: 500;
+            font-size: 48/$mb;
+        }
+        &__wrap {
+            margin-top: 100/$mb;
+            flex-direction: column;
+            align-items: center;
+            gap: 20/$mb;
+        }
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-cont {
+                &::before {
+                    top: 33/$mb;
+                    left: 33/$mb;
+                    width: 550/$mb;
+                }
+            }
+            &-img {
+                width: 550/$mb;
+            }
+            &-title {
+                font-size: 30/$mb;
+                margin-top: 60/$mb;
+            }
+            &-text {
+                margin-top: 20/$mb;
+                width: 600/$mb;
+            }
+            &-btn {
+                width: 280/$mb;
+                margin: 50/$mb;
+            }
+        }
+    }
+}
