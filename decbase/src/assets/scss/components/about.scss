@@ -2,6 +2,7 @@
 @import '../vars';
 
 .about{
+    margin-top: 100/$vw;
     &__learn {
         @include flex_center;
         gap: 100/$vw;
@@ -101,6 +102,7 @@
 
 @media (max-width: $mobile) {
     .about{
+        margin-top: 100/$mb;
         &__learn {
             flex-direction: column;
             gap: 50/$mb;
