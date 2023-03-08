@@ -5,7 +5,7 @@ import interSecond from "../assets/img/about2.png";
 const About = () => {
     return(
         <div className="container">
-            <section className="about">
+            <section className="about" id="about">
                 <div className="about__learn">
                     <div className="about__learn-wrap">
                         <img className="about__learn-img" src={interFirst} alt={"interior"}/>

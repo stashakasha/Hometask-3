@@ -5,7 +5,7 @@ import second from '../assets/img/newsSecond.png';
 const News = () => {
     return(
         <div className="container">
-            <section className="news">
+            <section className="news" id="news">
                 <h2 className="news__title">LETEST NEWS</h2>
                 <h3 className="news__desc">From Our Blog</h3>
                 <div className="news__wrap">

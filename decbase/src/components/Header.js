@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTheme } from '../hooks/use-theme'
-
+import { Link } from 'react-scroll';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FaSun, FaMoon  } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
@@ -19,37 +19,37 @@ const Header = () => {
     }
     return(
         <div className="container">
-            <header className="header">
+            <header className="header" id="header">
                 <div className="header__logo">
-                    <a className="header__logo-link" href="##" ><img className="header__logo-img" src={Logo} alt={"company logo"}/></a>
+                    <Link className="header__logo-link" ><img className="header__logo-img" src={Logo} alt={"company logo"}/></Link>
                 </div>
                 <nav className="header__nav">
                     <ul className={
                         nav ? "header__nav-list active" : "header__nav-list"
                         }>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Home</a>
+                            <Link to="header" smooth={true} offset = {-300} className="header__nav-link" onClick={() => setNav(false)}>Home</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Project</a>
+                            <Link to="stats" smooth={true} duration={2500} className="header__nav-link" onClick={() => setNav(false)}>Project</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Services</a>
+                            <Link to="services" smooth={true}  className="header__nav-link" onClick={() => setNav(false)}>Services</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>About</a>
+                            <Link to="about" smooth={true} duration={2500} offset = {-50} className="header__nav-link" onClick={() => setNav(false)}>About</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Blog</a>
+                            <Link to="news" smooth={true} duration={2500} className="header__nav-link" onClick={() => setNav(false)}>Blog</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Shop</a>
+                            <Link to="subscribe" smooth={true} duration={2500} offset = {-100} className="header__nav-link" onClick={() => setNav(false)}>Shop</Link>
                         </li>
                         <li className="header__nav-item">
-                            <a className="header__nav-link" href="##" onClick={() => setNav(false)}>Contact</a>
+                            <Link to="footer" smooth={true} duration={2500} offset = {-300} className="header__nav-link" onClick={() => setNav(false)}>Contact</Link>
                         </li>
                         <li className=" header__nav-btn btn">
-                            <a className="header__nav-link-btn" href="##" onClick={() => setNav(false)}>Sign Up</a>
+                            <Link className="header__nav-link-btn" onClick={() => setNav(false)}>Sign Up</Link>
                         </li>
                     </ul>
                 </nav>

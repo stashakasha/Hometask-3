@@ -13,6 +13,9 @@
             width: 150/$vw;
             min-width: 120px;
         }
+        &:hover {
+            cursor: pointer;
+        }
         &:active {
             scale: 1.05;
         }
@@ -39,6 +42,7 @@
                 color: var(--primary-green);
                 border: 1px solid var(--primary-green);
                 border-radius: 25/$vw;
+                cursor: pointer;
             }
             &:active {
                 border: 1px solid var(--background);

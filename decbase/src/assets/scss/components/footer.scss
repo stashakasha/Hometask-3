@@ -7,10 +7,17 @@
     background-color: var(--background-gray);
     color: var(--text-light);
     @include flex_around;
+    transition: scale .2s ease;
     &__logo {
         &-icon {
             width: 150/$vw;
             min-width: 120px;
+            &:hover {
+                cursor: pointer;
+            }
+            &:active {
+                scale: 1.05;
+            }
         }
         &-desc {
             margin-top: 15/$vw;
@@ -39,6 +46,7 @@
         transition: scale 0.2s ease;
         &:hover {
             color: var(--primary-green);
+            cursor: pointer;
         }
         &:active {
             scale: 1.03;
@@ -67,6 +75,9 @@
                 color: var(--primary-green);
                 background-color: var(--primary-brown);
                 scale: 1.03;
+            }
+            svg {
+                @include flex_center;
             }
         }
     }

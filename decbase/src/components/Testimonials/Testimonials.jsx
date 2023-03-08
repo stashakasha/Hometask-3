@@ -24,7 +24,7 @@ export default function Testimonials () {
             slidesPerView={2}
             slidesPerGroup ={2}
             speed = {1000}
-            loop={false}
+            loop={true}
             navigation={{
               prevEl: '.prev_button',
               nextEl: '.next_button',
