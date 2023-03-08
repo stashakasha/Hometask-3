@@ -4,7 +4,7 @@
 .testimonials {
 
     max-width: 1360/$vw;
-    margin: 100/$vw auto;
+    margin: 100/$vw auto 20/$vw;
     min-width: 0;
     &__title {
         @include section-title;
