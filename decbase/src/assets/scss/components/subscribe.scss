@@ -1,0 +1,222 @@
+@import '../mixins';
+@import '../vars';
+
+
+.subscribe {
+    &__title {
+        margin-top: 100/$vw;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 48/$vw;
+        line-height: .58;
+        text-align: center;
+    }
+    hr {
+        margin: 40/$vw auto 0;
+        width: 460/$vw;
+        border: 0.5/$vw solid var(--text-light);
+    }
+    &__desc {
+        margin: 40/$vw auto;
+        width: 650/$vw;
+        text-align: center;
+      color: var(--text-light);
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 28/$vw;
+        width: 770/$vw;
+    }
+    &__input, &__input__error{
+        width: 315/$vw;
+        height: 48/$vw;
+        background: #eeeeee;
+        border-radius: 20/$vw 0px;
+        padding: 5/$vw 25/$vw; 
+    }
+    &__input__error{
+        border: 2/$vw solid red;
+        color: red;
+    }
+    &__input_email, &__input_email__error {  
+        width: 770/$vw;
+        height: 48/$vw;
+        background: #eeeeee;
+        border-radius: 20/$vw 0px;
+        padding: 5/$vw 25/$vw;
+    }
+    &__input_email__error {  
+        border: 2/$vw solid red;
+        color: red;
+    }
+    &__button, &__button-disable {
+        width: 200/$vw;
+        height: 50/$vw;
+        margin-top: 42/$vw;
+        margin-bottom: 100/$vw;
+        @include btn-main;
+    }
+    &__button-disable {
+        background: grey;
+    }
+    &__errors {
+        height: 20px;
+        p {
+            color: red;
+        }
+    }
+    }
+  
+input::placeholder {  
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20/$vw;
+    line-height: 55/$vw;
+    color: var(--text-light);
+}
+
+
+  //Adaptive 
+
+@media (max-width: $mobile) {
+    .subscribe {
+        &__title {
+            margin-top: 100/$mb;
+            font-size: 48/$mb;
+        }
+        hr {
+            margin: 40/$mb auto 0;
+            width: 460/$mb;
+        }
+        &__desc {
+            margin: 40/$mb auto;
+            width: 650/$mb;
+        }
+      }     
+      .form {
+        &-wrap {
+          margin-bottom: 28/$mb;
+          width: 770/$mb;
+        }
+        &__input, &__input__error{
+            width: 315/$mb;
+            height: 48/$mb;
+            border-radius: 20/$mb 0px;
+            padding: 5/$mb 25/$mb; 
+        }
+        &__input_email, &__input_email__error {  
+            width: 770/$mb;
+            height: 48/$mb;
+            border-radius: 20/$mb 0px;
+            padding: 5/$mb 25/$mb;
+        }
+        &__button, &__button-disable {
+            margin-top: 42/$mb;
+            margin-bottom: 100/$mb;
+        }
+        &__errors {
+            height: 20/$mb;
+        }
+    }
+    input::placeholder {  
+        font-size: 20/$mb;
+        line-height: 55/$mb;
+    }
+}
+
+  // POPUP================================
+.popup {
+    display: none;
+    &-text {
+        width: 900/$vw;
+        font-weight: 500;
+        font-size: 80/$vw;
+
+        text-align: center;
+        span {
+            font-weight: 700;
+            font-size: 90/$vw;
+            color: rgb(206, 44, 44);;
+        }
+    }
+}
+.popup.show {
+    position: fixed!important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    --background: rgb(219, 165, 65);
+    --background-tr: rgba(219, 165, 65,0);
+    --border: #000;
+    --yellow: rgb(255, 251, 2);
+    --red: rgb(206, 44, 44);
+    --green: rgb(77, 197, 30);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  .hypnotic {
+    position: relative;
+    width: 500/$vw;
+    height: 400/$vw;
+    margin: 0;
+    border-radius: 5/$vw;
+    background:
+    radial-gradient(ellipse at 50% 100%,var(--background-tr)49%,var(--border)50%,var(--border)53%,var(--background-tr)54%)50% 30%/15% 5% no-repeat,
+    linear-gradient(0deg,var(--border)100%,var(--border)100%)49% 65.2%/15% 1% no-repeat,
+    linear-gradient(-75deg,var(--background-tr)49%,var(--border)50%,var(--border)53%,var(--background-tr)54%)45% 47%/15% 35% no-repeat,
+    radial-gradient(circle,var(--background-tr)49%,var(--border)50%,var(--border)51%,var(--background-tr)52%)80% 30%/40% 40% no-repeat,
+   radial-gradient(circle,var(--background-tr)49%,var(--border)50%,var(--border)51%,var(--background-tr)52%)20% 30%/40% 40% no-repeat,
+    ;
+    &::before {
+      content:"";
+      display: block;
+      width: 25.5%;
+      height: 31.5%;
+      left: 19.2%;
+      top:22.3%;
+      position: absolute;
+      border-radius: 100%;
+      animation: rotate 5s linear infinite;
+      background: 
+      repeating-conic-gradient(var(--yellow) 0deg, var(--red) 10deg,var(--green) 20deg)0% 0%/100% 100%
+      ;
+    }
+    &::after {
+      content:"";
+      display: block;
+      width: 25.5%;
+      height: 31.5%;
+      left: 55.2%;
+      top:22.3%;
+      position: absolute;
+      border-radius: 100%;
+      animation: rotate 5s linear infinite reverse;
+      background: 
+      repeating-conic-gradient(var(--yellow) 0deg, var(--red) 10deg,var(--green) 20deg)0% 0%/100% 100%
+    }
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
