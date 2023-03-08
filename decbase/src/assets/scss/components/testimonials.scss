@@ -1,0 +1,128 @@
+@import '../mixins';
+@import '../vars';
+
+.testimonials {
+
+    max-width: 1360/$vw;
+    margin: 100/$vw auto;
+    min-width: 0;
+    &__title {
+        @include section-title;
+        text-align: center;
+    }
+    &__desc {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 48/$vw;
+        line-height: 1.5;
+        text-align: center;
+    }
+    &__block {
+        width: 100%;
+        height: 100%;
+    }
+    &__wrap {
+        height: 400/$vw;
+    }
+    &__items {
+        
+        &-nav {
+            display: flex;
+            justify-content: end;
+            gap: 50/$vw;
+            .prev_button, .next_button  {
+            width: 35/$vw;
+            height: 35/$vw;;
+            @include flex_center;
+            color: var(--primary-brown);
+            background: var(--background);
+            box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            transition: all .2s ease;
+            svg {
+                polyline {
+                    stroke: var(--primary-brown);
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                background: var(--primary-green);
+            }
+            &:active {
+                scale: 1.03;
+                svg {
+                    polyline {
+                        stroke: var(--background);
+                    }
+                }
+            }
+            }
+        }
+    }
+    &__item {
+        width: 580/$vw;
+        height: 226/$vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+        border-radius: 70px 0px;
+        position: relative;
+        padding-left: 100/$vw;
+        &-icon {
+            img {
+                width: 130/$vw;
+                border-radius: 35px 0px;
+                position: absolute;
+                left: -50/$vw;
+            }
+        }
+        &-name {
+            font-weight: 700;
+            font-size: 24/$vw;
+            line-height: 1.375;
+        }
+        &-job {
+            font-weight: 400;
+            font-size: 16/$vw;
+            color: var(--text-light);
+            &::after {
+            content: "";
+            background: url(../../img/quot.svg) no-repeat;
+            width: 50/$vw;
+            height: 50/$vw;
+            display: block;
+            position: absolute;
+            right: 40/$vw;
+            top: 30/$vw;
+
+            svg {
+                
+            }
+            }
+
+        }
+        &-sign {
+            position: relative;
+            height: 33/$vw;
+            font-weight: 700;
+            font-size: 96/$vw;
+            line-height: 1;
+            color: var(--primary-brown);
+        }
+        &-text {
+            width: 435/$vw;
+            font-weight: 400;
+            font-size: 18/$vw;
+            line-height: 1.56;
+            color: var(--text-light);
+        }   
+    }
+}
+.swiper-wrapper {
+    margin-top: 40/$vw;
+    margin-left: 40/$vw;
+}
+.swiper-slide-active {
+    margin-left: 10/$vw;
+}
