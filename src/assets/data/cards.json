@@ -1,0 +1,18 @@
+
+[
+    {
+        "cardIcon": "/img/services1.svg",
+        "cardTitle": "Interior Design1",
+        "cardText": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore."
+    },
+    {
+        "cardIcon": "/img/services3.svg",
+        "cardTitle": "Architecture 1",
+        "cardText": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore."
+    },
+    {
+        "cardIcon": "/img/services3.svg",
+        "cardTitle": "Planning 1",
+        "cardText": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore."
+    }
+]

@@ -25,7 +25,7 @@
 
     }
     &__card {
-        transition: scale .3s ease;
+        transition: scale .5s ease;
         &-cont {
             @include img-decor;
             position: relative;
@@ -59,7 +59,7 @@
             margin-top: 50/$vw;
         }
         &:hover {
-            scale: 1.2;
+            scale: 1.1;
             position: relative;
         }
         &:first-child:hover {

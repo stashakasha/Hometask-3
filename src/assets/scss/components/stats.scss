@@ -29,10 +29,10 @@
         @include flex_center;
         flex-direction: column;
         position: relative;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease;
         &:hover {
-            scale: 1.008;
-            box-shadow: 0 13px 16px rgba(0, 0, 0, 0.15);
+            scale: 1.01;
+            box-shadow: 0 13px 16px rgba(0, 0, 0, 0.2);
         }
         &-num {
             font-weight: 700;

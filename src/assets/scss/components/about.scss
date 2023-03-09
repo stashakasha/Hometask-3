@@ -6,12 +6,13 @@
     position: relative;
     &::before {
         content: "";
-        width: 240/$vw;
-        height: 250/$vw;
+        width: 242/$vw;
+        height: 255/$vw;
         position: absolute;
-        right: 0;
-        top: -200/$vw;
-        background: url("../../img/decor1.png");
+        right: -40/$vw;
+        top: -250/$vw;
+        background: url("../../img/decor1.png") no-repeat;
+        overflow: hidden;
     }
     &__learn {
         @include flex_center;
@@ -66,7 +67,7 @@
             position: absolute;
             left: 0;
             top: -100/$vw;
-            background: url("../../img/decor1.png");
+            background: url("../../img/decor1.png") no-repeat;
         }
         &-content {
             max-width: 535/$vw;

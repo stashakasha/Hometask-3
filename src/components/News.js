@@ -39,7 +39,7 @@ const News = () => {
                 <h3 className="news__desc">From Our Blog</h3>
                 <div className="news__wrap">
                     <motion.div 
-                    custom = {4}
+                    custom = {2}
                     variants={animation} 
                     className="news__card">
                     <div className="news__card-cont">
@@ -51,7 +51,7 @@ const News = () => {
                         <button className="news__card-btn" type="button">CONTINUE READING....</button>
                     </motion.div>
                     <motion.div  
-                    custom = {6}
+                    custom = {4}
                     variants={animation2} 
                     className="news__card">
                     <div className="news__card-cont">
