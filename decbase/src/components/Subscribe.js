@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import Bored from './Api'
 
 const Subscribe = () => {
   const {
@@ -24,7 +25,7 @@ const Subscribe = () => {
   };
 
   var today = new Date();
-  var now = today.toLocaleDateString('en-US');
+  var now = today.toLocaleDateString('en-GB');
 
   return (
     <div className='container'>
@@ -86,6 +87,9 @@ const Subscribe = () => {
               type="submit"
               value={'SUBSCRIBE'}
             />
+            <div className='api'>
+              <Bored />
+            </div>
           </form>
         </div>
       </section>

@@ -1,15 +1,47 @@
 import React from "react";
+import { motion } from 'framer-motion';
 import interFirst from "../assets/img/about1.png";
 import interSecond from "../assets/img/about2.png";
+
+const animation = {
+    hidden: {
+      x: -400,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const animation2 = {
+    hidden: {
+      x: 400,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
 
 const About = () => {
     return(
         <div className="container">
             <section className="about" id="about">
-                <div className="about__learn">
-                    <div className="about__learn-wrap">
+                <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.3 }}
+                className="about__learn">
+                    <motion.div 
+                    custom = {4}
+                    variants={animation} 
+                    className="about__learn-wrap">
                         <img className="about__learn-img" src={interFirst} alt={"interior"}/>
-                    </div>
+                    </motion.div>
                     <div className="about__learn-content">
                         <h2 className="about__learn-title">ABOUT US</h2>
                         <h3 className="about__learn-desc">Interioris The Will<br/> of An Epoch Mextreo</h3>
@@ -24,19 +56,29 @@ const About = () => {
                         </p>
                         <button className="about__learn-btn" type="button">Learn</button>
                     </div>
-                </div>
-                <div className="about__read">
+                </motion.div>
+                <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.3 }}
+                className="about__read">
                     <div className="about__read-content">
-                        <div className="about__read-wrapper">
+                        <motion.div 
+                        custom = {6}
+                        variants={animation} 
+                        className="about__read-wrapper">
                             <h2 className="about__read-title"><span>20</span></h2>
-                        </div>
+                        </motion.div>
                         <h3 className="about__read-desc">Years Of Successful Working The Market</h3>
                         <button className="about__learn-btn" type="button">Read more</button>
                     </div>
-                    <div className="about__read-wrap">
+                    <motion.div 
+                    custom = {4}
+                    variants={animation2} 
+                    className="about__read-wrap">
                         <img className="about__read-img" src={interSecond} alt={"interior"}/>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
         </div>
     );

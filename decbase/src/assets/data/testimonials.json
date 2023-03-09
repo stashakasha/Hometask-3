@@ -12,15 +12,15 @@
         "testimonialText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-        "testimonialIcon": "/img/Men.png",
-        "testimonialName": "Louis Saville ",
-        "testimonialJob": "/CEO at Google inc",
-        "testimonialText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
         "testimonialIcon": "/img/Women.png",
         "testimonialName": "Rekha Varadwaz ",
         "testimonialJob": "/Manager at Nike inc",
+        "testimonialText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        "testimonialIcon": "/img/Men.png",
+        "testimonialName": "Louis Saville ",
+        "testimonialJob": "/CEO at Google inc",
         "testimonialText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {

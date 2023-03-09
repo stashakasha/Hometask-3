@@ -25,6 +25,7 @@
 
     }
     &__card {
+        transition: scale .3s ease;
         &-cont {
             @include img-decor;
             position: relative;
@@ -56,6 +57,16 @@
             @include btn-main;
             width: 280/$vw;
             margin-top: 50/$vw;
+        }
+        &:hover {
+            scale: 1.2;
+            position: relative;
+        }
+        &:first-child:hover {
+            left: 60/$vw;
+        }
+        &:last-child:hover {
+            right: 60/$vw;
         }
     }
 }

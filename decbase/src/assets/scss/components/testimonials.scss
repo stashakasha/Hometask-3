@@ -95,12 +95,7 @@
             position: absolute;
             right: 40/$vw;
             top: 30/$vw;
-
-            svg {
-                
             }
-            }
-
         }
         &-sign {
             position: relative;
@@ -125,4 +120,71 @@
 }
 .swiper-slide-active {
     margin-left: 10/$vw;
+}
+
+@media (max-width: $mobile) {
+    .testimonials {
+        margin: 100/$mb auto 20/$mb;
+        &__desc {
+            font-size: 48/$mb;
+        }
+        &__block {
+            width: 100%;
+            height: 100%;
+        }
+        &__wrap {
+            height: 400/$mb;
+        }
+        &__items {
+            
+            &-nav {
+                gap: 50/$mb;
+                .prev_button, .next_button  {
+                width: 35/$mb;
+                height: 35/$mb;
+                }
+            }
+        }
+        &__item {
+            width: 580/$mb;
+            height: 226/$mb;
+            box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+            border-radius: 70/$mb 0;
+            padding-left: 100/$mb;
+            &-icon {
+                img {
+                    width: 130/$mb;
+                    border-radius: 35/$mb 0px;
+                    left: -50/$mb;
+                }
+            }
+            &-name {
+                font-size: 24/$vw;
+            }
+            &-job {
+                font-size: 16/$mb;
+                &::after {
+                width: 50/$mb;
+                height: 50/$mb;
+                right: 40/$mb;
+                top: 30/$mb;
+                }
+            }
+            &-sign {
+                height: 33/$mb;
+                font-size: 96/$mb;
+            }
+            &-text {
+                width: 435/$mb;
+                font-size: 18/$mb;
+            }   
+        }
+    }
+    .swiper-wrapper {
+        margin-top: 40/$mb;
+        margin-left: 40/$mb;
+    }
+    .swiper-slide-active {
+        margin-left: 10/$mb;
+    }
 }

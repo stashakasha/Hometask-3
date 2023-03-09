@@ -25,6 +25,17 @@ export default function Testimonials () {
             slidesPerGroup ={2}
             speed = {1000}
             loop={true}
+            breakpoints={{            
+                0: {                
+                   slidesPerView: 1,
+                 },
+                 768: {                
+                   slidesPerView: 2,
+                 },
+                 1281: {                
+                   slidesPerView: 3,
+                 },
+               }}
             navigation={{
               prevEl: '.prev_button',
               nextEl: '.next_button',
